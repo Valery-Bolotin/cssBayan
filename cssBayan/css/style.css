@@ -50,3 +50,140 @@ h6{
     margin-bottom: 2rem;
   }
   
+  h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .mem-input {
+    appearance: none;
+  }
+  
+  .mem-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-top: 0.2rem solid #aeb5bd;
+    padding: 1rem;
+  }
+  
+  .mem-title > p {
+    color: #ddbd09;
+    transition: 2s;
+  }
+  
+  .mem-input:checked ~ .mem-title > p {
+    color: #000;
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 0.5rem 0 0.5rem;
+    border-color: #000 transparent transparent transparent;
+    transition: 1s;
+  }
+  
+  .mem-input:checked ~ .mem-title > .arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.5rem 1rem 0.5rem;
+    border-color: transparent transparent #ddbd09 transparent;
+  }
+  
+  .mem-img {
+    width: 0%;
+    height: 0%;
+    display: block;
+    margin: auto;
+    transition: 1s;
+  }
+  
+  .mem-title-img {
+    opacity: 0;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .mem-input:checked ~ .mem-title-img {
+    opacity: 1;
+  }
+  
+  .mem-item:hover > .mem-title-img > .mem-img,
+  .mem-input:checked ~ .mem-title-img > .mem-img {
+    width: 90%;
+    height: 90%;
+  }
+  
+  @media (min-width: 400px) {
+    html {
+      font-size: 10px;
+    }
+  }
+  
+  @media (min-width: 825px) {
+    html {
+      font-size: 14px;
+    }
+  
+    .container {
+      max-width: 80vw;
+    }
+  
+    .mem-item:hover > .mem-title-img > .mem-img,
+    .mem-input:checked ~ .mem-title-img > .mem-img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    html {
+      font-size: 16px;
+    }
+  
+    .container {
+      max-width: 70vw;
+    }
+  
+    .mem-item:hover > .mem-title-img > .mem-img,
+    .mem-input:checked ~ .mem-title-img > .mem-img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  
+  @media (hover: hover) {
+    .container:hover > .mem-item > .mem-title > p {
+      color: #000;
+    }
+  
+    .mem-item:hover > .mem-title > p {
+      color: #000;
+    }
+  
+    .arrow {
+      opacity: 0;
+    }
+  
+    .container:hover > .mem-item > .mem-title > .arrow {
+      opacity: 1;
+    }
+  
+    .mem-item:hover > .mem-title > .arrow {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0.5rem 1rem 0.5rem;
+      border-color: transparent transparent #ddbd09 transparent;
+    }
+  
+    .mem-item:hover > .mem-title-img {
+      opacity: 1;
+    }
+  }
+  
